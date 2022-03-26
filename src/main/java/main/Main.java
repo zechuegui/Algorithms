@@ -3,6 +3,7 @@ package main;
 import manacher.Manacher;
 import search.BinarySearch;
 import sort.MergeSort;
+import sort.QuickSort;
 
 public class Main {
 
@@ -18,9 +19,11 @@ public class Main {
 //		System.out.println(bs.search(arr, 4));
 
 		MergeSort ms = new MergeSort();
+		QuickSort qs = new QuickSort();
 
 		int[] arr = new int[]{6, 7, 5, 3, 1, 99, 66, 2};
-		ms.mergeSort(arr);
+//		ms.mergeSort(arr);
+		qs.quicksort(arr);
 		printIntArray(arr);
 	}
 
