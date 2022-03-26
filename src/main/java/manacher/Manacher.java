@@ -19,7 +19,7 @@ public class Manacher {
 		int center = 0;
 		int right = 0;
 
-		for (int i = 1; i < transformedString.length-1; i++) {
+		for (int i = 1; i < transformedString.length - 1; i++) {
 
 			int mirror = 2 * center - i;
 
@@ -31,7 +31,7 @@ public class Manacher {
 				lsp[i]++;
 			}
 
-			if(i + lsp[i] > right){
+			if (i + lsp[i] > right) {
 				center = i;
 				right = i + lsp[i];
 			}
@@ -41,7 +41,7 @@ public class Manacher {
 
 		int length = 0;
 		center = 0;
-		for (int i = 1; i < lsp.length-1; i++) {
+		for (int i = 1; i < lsp.length - 1; i++) {
 			if (lsp[i] > length) {
 				length = lsp[i];
 				center = i;
